@@ -38,6 +38,8 @@
         ],
         "@typescript-eslint/no-explicit-any": [
             "warn"
-        ]
+        ],
+        "no-empty":"off",
+        "@typescript-eslint/explicit-module-boundary-types": "off"
     }
 }
