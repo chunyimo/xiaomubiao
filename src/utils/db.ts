@@ -1,6 +1,7 @@
 import chalk from "chalk";
 import mongoose from "mongoose";
 import "../models";
+import initModel from "../models";
 const connectDB = () => {
 	const { DB_HOST, DB_PORT, DB_PASSWORD, DB_USERNAME, DB_NAME } = process.env;
 	if (!DB_HOST || !DB_PORT || !DB_PASSWORD || !DB_USERNAME || !DB_NAME) {
@@ -16,6 +17,8 @@ const connectDB = () => {
 	});
 	db.once("open", () => {
 		console.log(chalk.green("[db] Connected successfully to db"));
+		initModel();
+		console.log(chalk.green(("[db init] init db successfully")));
 	});
 	return db;
 };
