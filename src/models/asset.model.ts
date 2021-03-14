@@ -7,29 +7,29 @@ export enum AssetTypeEnum {
   INVESTING = "INVESTING",
 }
 export interface IAsset extends Document {
-  name: String;
-  logo: String;
+  name: string;
+  logo: string;
   type: AssetTypeEnum;
-  where: String;
-  value: Number;
-  createTime: String;
+  where: string;
+  value: number;
+  createTime: string;
 }
 const AssetSchema: Schema = new Schema({
-  name: String,
-  logo: String,
-  type: {
-    type: String,
-    enum: [
-      AssetTypeEnum.DEMAND_SAVINGS,
-      AssetTypeEnum.FIXED_DEPOSIT,
-      AssetTypeEnum.EMERGENCY_SAVINGS,
-      AssetTypeEnum.INVESTED,
-      AssetTypeEnum.INVESTING,
-    ],
-  },
-  where: String,
-  value: Number,
-  createTime: String,
+	name: String,
+	logo: String,
+	type: {
+		type: String,
+		enum: [
+			AssetTypeEnum.DEMAND_SAVINGS,
+			AssetTypeEnum.FIXED_DEPOSIT,
+			AssetTypeEnum.EMERGENCY_SAVINGS,
+			AssetTypeEnum.INVESTED,
+			AssetTypeEnum.INVESTING,
+		],
+	},
+	where: String,
+	value: Number,
+	createTime: String,
 });
 
 export default mongoose.model<IAsset>("Asset", AssetSchema);

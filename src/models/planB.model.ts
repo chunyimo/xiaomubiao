@@ -8,31 +8,31 @@ export enum PlanBTrendEnum {
   DOWN = "DOWN",
 }
 export interface IPlanB extends Document {
-  name: String;
-  targetName: String;
+  name: string;
+  targetName: string;
   State: PlanBStateEnum;
   startTime: Date;
   trend: PlanBTrendEnum;
-  anchor: Number;
-  targetPoint: Number;
-  resistanceLevel: { type: Number; min: 1; max: 5 };
-  pushForceLevel: { type: Number; min: 1; max: 5 };
+  anchor: number;
+  targetPoint: number;
+  resistanceLevel: { type: number; min: 1; max: 5 };
+  pushForceLevel: { type: number; min: 1; max: 5 };
   intervalTime: Date;
   createTime: Date;
 }
 
 const PlanBSchema: Schema = new Schema({
-  name: String,
-  targetName: String,
-  State: { type: String, enum: [PlanBStateEnum.ON, PlanBStateEnum.OFF] },
-  startTime: Date,
-  trend: { type: String, enum: [PlanBTrendEnum.UP, PlanBTrendEnum.DOWN] },
-  anchor: Number,
-  targetPoint: Number,
-  resistanceLevel: { type: Number, min: 1, max: 5 },
-  pushForceLevel: { type: Number, min: 1, max: 5 },
-  intervalTime: Date,
-  createTime: Date,
+	name: String,
+	targetName: String,
+	State: { type: String, enum: [PlanBStateEnum.ON, PlanBStateEnum.OFF] },
+	startTime: Date,
+	trend: { type: String, enum: [PlanBTrendEnum.UP, PlanBTrendEnum.DOWN] },
+	anchor: Number,
+	targetPoint: Number,
+	resistanceLevel: { type: Number, min: 1, max: 5 },
+	pushForceLevel: { type: Number, min: 1, max: 5 },
+	intervalTime: Date,
+	createTime: Date,
 });
 
 export default mongoose.model<IPlanB>("PlanB", PlanBSchema);

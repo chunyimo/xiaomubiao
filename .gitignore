@@ -1,2 +1,6 @@
 # deps
 node_modules
+
+#deps
+yarn-error.log
+yarn.lock

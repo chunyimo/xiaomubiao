@@ -5,6 +5,6 @@ export interface HttpMessage {
 }
 const httpMessages:Record<string, HttpMessage> = {
 
-}
+};
 
 export default httpMessages;

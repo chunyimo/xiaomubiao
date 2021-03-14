@@ -4,19 +4,19 @@ export enum BillTypeEnum {
   EXPENDITURE = "EXPENDITURE",
 }
 export interface IBill extends Document {
-  type: BillTypeEnum;
-  project: String;
-  account: Number;
+  type: BillTypeEnum; 
+  project: string;
+  account: number;
   time: Date;
   createTime: Date;
 }
 
 const BillSchema: Schema = new Schema({
-  type: { type: String, enum: [BillTypeEnum.INCOME, BillTypeEnum.EXPENDITURE] },
-  project: String,
-  account: String,
-  time: Date,
-  createTime: Date,
+	type: { type: String, enum: [BillTypeEnum.INCOME, BillTypeEnum.EXPENDITURE] },
+	project: String,
+	account: String, 
+	time: Date,
+	createTime: Date,
 });
 
 export default mongoose.model<IBill>("Bill", BillSchema);
