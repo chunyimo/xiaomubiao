@@ -23,6 +23,12 @@ const config = {
 	api: {
 		prefix: "/api",
 	},
+	corsOptions: {
+		origin: "*",
+		method: "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS",
+		allowedHeaders: ["Content-Type", "Authorization"],
+		optionsSuccessStatus: 204
+	}
 };
 
 export default config;
