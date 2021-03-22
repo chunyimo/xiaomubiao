@@ -3,6 +3,8 @@ import express, { Express } from "express";
 import config from "../config";
 import routersRegister from "../routes";
 const expressLoader = async ({ app }: {app: Express}) => {
+	app.use(cors(config.corsOptions));
+	
 	app.get("/status", (req, res) => {
 		res.sendStatus(200).end();
 	});
@@ -10,7 +12,7 @@ const expressLoader = async ({ app }: {app: Express}) => {
 		res.sendStatus(200).end();
 	});
 
-	app.use(cors(config.corsOptions));
+
 	app.use(express.json());
   
 	app.use(config.api.prefix, routersRegister());

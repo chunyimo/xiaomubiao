@@ -1,3 +1,4 @@
+import "reflect-metadata";
 import express from "express";
 import startupModules from "./loaders";
 import chalk from "chalk";
