@@ -1,11 +1,12 @@
-import mongoose, { Schema, Document } from "mongoose";
+import mongoose, { Schema, Document } from 'mongoose';
 export enum InvestmentTypeEnum {
-  STOCK = "STOCK",
-  BONDS = "BONDS",
-  BITCOIN = "BITCOIN",
-  OTHER = "OTHER",
+  STOCK = 'STOCK',
+  BONDS = 'BONDS',
+  BITCOIN = 'BITCOIN',
+  OTHER = 'OTHER',
 }
 export interface IInvestment extends Document {
+	_id: string;
   name: string;
   type: InvestmentTypeEnum;
   logo: string;
@@ -39,4 +40,4 @@ const InvestmentSchema: Schema = new Schema({
 	createTime: Date,
 });
 
-export default mongoose.model<IInvestment>("Investment", InvestmentSchema);
+export default mongoose.model<IInvestment>('Investment', InvestmentSchema);

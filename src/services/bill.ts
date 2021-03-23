@@ -1,3 +1,4 @@
+
 import { Model } from 'mongoose';
 import { Inject, Service } from 'typedi';
 import { IBill } from '../models/bill.model';

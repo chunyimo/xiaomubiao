@@ -1,13 +1,15 @@
-import dotenv from "dotenv";
-import chalk from "chalk";
-import path from "path";
+import dotenv from 'dotenv';
+import chalk from 'chalk';
+import path from 'path';
 
 export const initEnv = () => {
-	const envFound = dotenv.config({ path: path.resolve(__dirname, "../../.env") });
-	if (envFound.error) {
-		console.error(chalk.red("[init] Init env failed!"));
-	}
-	console.log(chalk.green("[init] Init env successfully!"));
+  const envFound = dotenv.config({
+    path: path.resolve(__dirname, '../../.env'),
+  });
+  if (envFound.error) {
+    console.error(chalk.red('[init] Init env failed!'));
+  }
+  console.log(chalk.green('[init] Init env successfully!'));
 };
 
 initEnv();
@@ -21,12 +23,12 @@ const config = {
 	DB_PASSWORD: process.env.DB_PASSWORD,
 
 	api: {
-		prefix: "/api",
+		prefix: '/api',
 	},
 	corsOptions: {
-		origin: "*",
-		method: "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS",
-		allowedHeaders: ["Content-Type", "Authorization"],
+		origin: '*',
+		method: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
+		allowedHeaders: ['Content-Type', 'Authorization'],
 		optionsSuccessStatus: 204
 	}
 };

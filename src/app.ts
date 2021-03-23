@@ -12,13 +12,12 @@ const startServer = async () => {
 		await startupModules({ app });
 		app.listen(PORT, () => {
 			console.log(`Sever listening at http://${HOST}:${PORT}`);
-		}).on("error", err => {
-			console.log(chalk.red("Start server failed: ", err));
+		}).on('error', err => {
+			console.log(chalk.red('Start server failed: ', err));
 		});
 	} catch (error) {
 		
 	}
-	
 };
 
 startServer();

@@ -1,10 +1,10 @@
-import mongoose, { Schema, Document } from "mongoose";
+import mongoose, { Schema, Document } from 'mongoose';
 export enum BillTypeEnum {
-  INCOME = "INCOME",
-  EXPENDITURE = "EXPENDITURE",
+  INCOME = 'INCOME',
+  EXPENDITURE = 'EXPENDITURE',
 }
 export interface IBill extends Document {
-  type: BillTypeEnum; 
+  type: BillTypeEnum;
   project: string;
   account: number;
   time: Date;
@@ -19,4 +19,4 @@ const BillSchema: Schema = new Schema({
 	createTime: Date,
 });
 
-export default mongoose.model<IBill>("Bill", BillSchema);
+export default mongoose.model<IBill>('Bill', BillSchema);
