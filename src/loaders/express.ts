@@ -1,24 +1,22 @@
-import cors from "cors";
-import express, { Express } from "express";
-import config from "../config";
-import routersRegister from "../routes";
-const expressLoader = async ({ app }: {app: Express}) => {
-	app.use(cors(config.corsOptions));
-	
-	app.get("/status", (req, res) => {
-		res.sendStatus(200).end();
-	});
-	app.head("/status", (req, res) => {
-		res.sendStatus(200).end();
-	});
+import cors from 'cors';
+import express, { Express } from 'express';
+import config from '../config';
+import routersRegister from '../routes';
+const expressLoader = async ({ app }: { app: Express }) => {
+  app.use(cors(config.corsOptions));
 
+  app.get('/status', (req, res) => {
+    res.sendStatus(200).end();
+  });
+  app.head('/status', (req, res) => {
+    res.sendStatus(200).end();
+  });
 
-	app.use(express.json());
-  
-	app.use(config.api.prefix, routersRegister());
+  app.use(express.json());
 
-	// todo error handler
-  
+  app.use(config.api.prefix, routersRegister());
+
+  // todo error handler
 };
 
 export default expressLoader;

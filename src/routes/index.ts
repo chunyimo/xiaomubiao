@@ -4,16 +4,16 @@ import userRouter from './user.router';
 import billRouter from './bill.router';
 import investmentRouter from './investment.router';
 const routers: Array<(app: Router) => void> = [
-	userRouter,
-	billRouter,
-	investmentRouter
+  userRouter,
+  billRouter,
+  investmentRouter
 ];
 const routersRegister = () => {
-	const app = Router();
-	forEach(routers, router => {
-		router(app);
-	});
-	return app;
+  const app = Router();
+  forEach(routers, router => {
+    router(app);
+  });
+  return app;
 };
 
 export default routersRegister;

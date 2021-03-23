@@ -1,7 +1,5 @@
-import { Router } from "express";
+import { Router } from 'express';
 
-const userRouter = (app: Router) => {
-
-};
+const userRouter = (app: Router) => {};
 
 export default userRouter;

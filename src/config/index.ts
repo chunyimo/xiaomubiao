@@ -14,23 +14,23 @@ export const initEnv = () => {
 
 initEnv();
 const config = {
-	HOST: process.env.HOST,
-	PORT: process.env.PORT,
-	DB_NAME: process.env.DB_NAME,
-	DB_HOST: process.env.DB_HOST,
-	DB_PORT: process.env.DB_PORT,
-	DB_USERNAME: process.env.DB_USERNAME,
-	DB_PASSWORD: process.env.DB_PASSWORD,
+  HOST: process.env.HOST,
+  PORT: process.env.PORT,
+  DB_NAME: process.env.DB_NAME,
+  DB_HOST: process.env.DB_HOST,
+  DB_PORT: process.env.DB_PORT,
+  DB_USERNAME: process.env.DB_USERNAME,
+  DB_PASSWORD: process.env.DB_PASSWORD,
 
-	api: {
-		prefix: '/api',
-	},
-	corsOptions: {
-		origin: '*',
-		method: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
-		allowedHeaders: ['Content-Type', 'Authorization'],
-		optionsSuccessStatus: 204
-	}
+  api: {
+    prefix: '/api',
+  },
+  corsOptions: {
+    origin: '*',
+    method: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    optionsSuccessStatus: 204
+  }
 };
 
 export default config;
