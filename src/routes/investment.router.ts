@@ -21,7 +21,8 @@ const investmentRouter = (app: Router) => {
         investTime: new Date(moment.now()),
         createTime: new Date(moment.now())
       };
-      investmentServiceInstance.add(newInvestment);
+      const investment = await investmentServiceInstance.add(newInvestment);
+      res.send(investment);
     } catch (error) {
       
     }
