@@ -4,5 +4,6 @@
   "bracketSpacing": true,
   "jsxBracketSameLine": true,
   "arrowParens": "always",
+  "indent": 2,
   "rangeEnd": 150
 }

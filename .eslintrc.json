@@ -17,8 +17,8 @@
     ],
     "rules": {
         "indent": [
-            "off",
-            "tab"
+            "error",
+            2
         ],
         "linebreak-style": [
             "error",
