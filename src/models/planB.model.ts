@@ -8,6 +8,7 @@ export enum PlanBTrendEnum {
   DOWN = 'DOWN',
 }
 export interface IPlanB extends Document {
+  _id: string;
   name: string;
   targetName: string;
   State: PlanBStateEnum;

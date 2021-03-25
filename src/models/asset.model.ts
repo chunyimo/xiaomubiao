@@ -7,6 +7,7 @@ export enum AssetTypeEnum {
   INVESTING = 'INVESTING',
 }
 export interface IAsset extends Document {
+  _id: string;
   name: string;
   logo: string;
   type: AssetTypeEnum;

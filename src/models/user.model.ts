@@ -4,6 +4,7 @@ import mongoose, { Schema, Document } from 'mongoose';
 import { IBill } from './bill.model';
 import { IAsset } from './asset.model';
 export interface IUser extends Document {
+  _id: string;
   username: string;
   password: string;
   email: string;

@@ -4,6 +4,7 @@ export enum BillTypeEnum {
   EXPENDITURE = 'EXPENDITURE',
 }
 export interface IBill extends Document {
+  _id: string;
   type: BillTypeEnum;
   project: string;
   account: number;
